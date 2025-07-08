@@ -1,0 +1,41 @@
+[package]
+name = "integration-tests"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+# Workspace dependencies
+threshold = { path = "../threshold" }
+relayer = { path = "../relayer" }
+api = { path = "../api" }
+
+# Async runtime
+tokio = { workspace = true }
+
+# Serialization
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+# HTTP client
+reqwest = { workspace = true }
+
+# Blockchain libraries
+ethers = { workspace = true }
+subxt = { workspace = true }
+
+# Error handling
+anyhow = { workspace = true }
+
+# Logging
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+
+# Testing
+tokio-test = "0.4"
+rand = "0.8"
+
+[features]
+default = []
+integration = []

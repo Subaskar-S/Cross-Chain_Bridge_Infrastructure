@@ -1,0 +1,96 @@
+version: '3.8'
+
+services:
+  # Local Ethereum node (Anvil from Foundry)
+  ethereum-node:
+    image: ghcr.io/foundry-rs/foundry:latest
+    container_name: bridge-ethereum
+    ports:
+      - "8545:8545"
+    command: >
+      anvil 
+      --host 0.0.0.0 
+      --port 8545 
+      --accounts 10 
+      --balance 10000
+      --gas-limit 30000000
+      --gas-price 1000000000
+    networks:
+      - bridge-network
+
+  # Local Substrate node
+  substrate-node:
+    image: parity/substrate:latest
+    container_name: bridge-substrate
+    ports:
+      - "9944:9944"
+      - "9933:9933"
+      - "30333:30333"
+    command: >
+      substrate
+      --dev
+      --ws-external
+      --rpc-external
+      --rpc-cors all
+      --unsafe-ws-external
+      --unsafe-rpc-external
+    networks:
+      - bridge-network
+
+  # PostgreSQL for relayer state
+  postgres:
+    image: postgres:15
+    container_name: bridge-postgres
+    environment:
+      POSTGRES_DB: bridge
+      POSTGRES_USER: bridge_user
+      POSTGRES_PASSWORD: bridge_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - bridge-network
+
+  # Redis for caching and pub/sub
+  redis:
+    image: redis:7-alpine
+    container_name: bridge-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - bridge-network
+
+  # Prometheus for metrics
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: bridge-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - bridge-network
+
+  # Grafana for dashboards
+  grafana:
+    image: grafana/grafana:latest
+    container_name: bridge-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana:/etc/grafana/provisioning
+    networks:
+      - bridge-network
+
+volumes:
+  postgres_data:
+  grafana_data:
+
+networks:
+  bridge-network:
+    driver: bridge

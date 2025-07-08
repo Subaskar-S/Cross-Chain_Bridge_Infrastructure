@@ -1,0 +1,27 @@
+{
+  "name": "cross-chain-bridge-ethereum",
+  "version": "1.0.0",
+  "description": "Ethereum smart contracts for cross-chain bridge",
+  "scripts": {
+    "build": "forge build",
+    "test": "forge test",
+    "deploy:local": "forge script script/Deploy.s.sol --rpc-url local --broadcast",
+    "deploy:goerli": "forge script script/Deploy.s.sol --rpc-url goerli --broadcast --verify",
+    "deploy:sepolia": "forge script script/Deploy.s.sol --rpc-url sepolia --broadcast --verify",
+    "install": "forge install",
+    "update": "forge update",
+    "fmt": "forge fmt",
+    "clean": "forge clean"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": [
+    "ethereum",
+    "solidity",
+    "cross-chain",
+    "bridge",
+    "foundry"
+  ],
+  "author": "Cross-Chain Bridge Team",
+  "license": "MIT"
+}

@@ -1,0 +1,60 @@
+[workspace]
+members = [
+    "relayer",
+    "threshold",
+    "api",
+    "tests",
+]
+exclude = [
+    "contracts/substrate",
+]
+resolver = "2"
+
+[workspace.dependencies]
+# Async runtime
+tokio = { version = "1.0", features = ["full"] }
+tokio-util = "0.7"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# HTTP and WebSocket
+reqwest = { version = "0.11", features = ["json"] }
+axum = "0.7"
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors", "trace"] }
+
+# Blockchain libraries
+ethers = "2.0"
+web3 = "0.19"
+subxt = "0.32"
+
+# Cryptography
+k256 = { version = "0.13", features = ["ecdsa", "schnorr"] }
+sha2 = "0.10"
+rand = "0.8"
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Configuration
+config = "0.14"
+
+# Database (optional for state persistence)
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres", "sqlite", "chrono", "uuid"] }
+
+# Testing
+mockall = "0.12"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Cross-Chain Bridge Team"]
+license = "MIT"
+repository = "https://github.com/your-org/cross-chain-bridge"

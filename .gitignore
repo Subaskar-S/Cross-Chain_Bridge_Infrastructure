@@ -1,0 +1,73 @@
+# Rust build artifacts
+/target/
+**/target/
+**/*.rs.bk
+Cargo.lock
+
+# Rust library files (should never be in repo)
+*.rlib
+*.rmeta
+*.so
+*.dylib
+*.dll
+
+# Rust incremental compilation
+**/incremental/
+**/*incremental*/
+
+# Rust debug files
+*.pdb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Database
+*.db
+*.sqlite
+
+# Logs
+*.log
+logs/
+
+# Build artifacts
+*.exe
+demo
+verify_project
+
+# Node.js (for Ethereum tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Foundry
+cache/
+out/
+broadcast/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Test artifacts
+coverage/
+.nyc_output/
+
+# Docker
+.dockerignore
+
+# Backup files
+*.bak
+*.backup

@@ -1,0 +1,50 @@
+[package]
+name = "relayer"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+# Workspace dependencies
+threshold = { path = "../threshold" }
+
+# Async runtime
+tokio = { workspace = true }
+tokio-util = { workspace = true }
+
+# Serialization
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+# HTTP and WebSocket
+reqwest = { workspace = true }
+
+# Blockchain libraries
+ethers = { workspace = true }
+subxt = { workspace = true }
+
+# Error handling
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+
+# Logging
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+
+# Configuration
+config = { workspace = true }
+
+# Database
+sqlx = { workspace = true }
+
+# Configuration
+toml = "0.8"
+
+# Additional dependencies
+futures = "0.3"
+hex = "0.4"
+
+[dev-dependencies]
+mockall = { workspace = true }
+tokio-test = "0.4"
