@@ -124,6 +124,125 @@ This bridge implements multiple security layers:
 - Time-locked operations for emergency stops
 - Comprehensive monitoring and alerting
 
-## 📄 License
+---
 
-MIT License - see [LICENSE](LICENSE) for details.
+## 📜 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+The MIT License is a permissive license that allows for commercial use, modification, distribution, and private use. It only requires preservation of copyright and license notices.
+
+## 🤝 Contributing
+
+We welcome contributions from the community! Here's how you can get involved:
+
+### Getting Started
+
+1. **🍴 Fork the Repository**
+   ```bash
+   # Click the "Fork" button on GitHub or use GitHub CLI
+   gh repo fork Subaskar-S/cross-chain-bridge
+   ```
+
+2. **📥 Clone Your Fork**
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/cross-chain-bridge.git
+   cd cross-chain-bridge
+   ```
+
+3. **🌿 Create a Feature Branch**
+   ```bash
+   # Create a descriptive branch name
+   git checkout -b feature/add-new-chain-support
+   # or
+   git checkout -b fix/validator-rotation-bug
+   ```
+
+4. **🔧 Make Your Changes**
+   - Follow the existing code style and conventions
+   - Add tests for new functionality
+   - Update documentation as needed
+   - Ensure all tests pass: `cargo test --workspace`
+
+5. **💾 Commit Your Changes**
+   ```bash
+   # Stage your changes
+   git add .
+
+   # Write a clear, descriptive commit message
+   git commit -m "feat: add support for Binance Smart Chain integration
+
+   - Implement BSC contract deployment scripts
+   - Add BSC-specific event monitoring
+   - Update threshold signature validation for BSC
+   - Add comprehensive tests for BSC bridge operations"
+   ```
+
+6. **📤 Push to Your Fork**
+   ```bash
+   git push origin feature/add-new-chain-support
+   ```
+
+7. **🔄 Create a Pull Request**
+   - Go to your fork on GitHub
+   - Click "New Pull Request"
+   - Fill out the PR template with:
+     - Clear description of changes
+     - Testing performed
+     - Breaking changes (if any)
+     - Screenshots (if UI changes)
+
+### 📋 Contribution Guidelines
+
+- **Code Quality**: Follow Rust best practices and run `cargo clippy`
+- **Testing**: Maintain or improve test coverage
+- **Documentation**: Update relevant docs for new features
+- **Security**: Consider security implications of all changes
+- **Performance**: Profile performance-critical changes
+
+### 🐛 Reporting Issues
+
+Found a bug? Please create an issue with:
+- Clear description of the problem
+- Steps to reproduce
+- Expected vs actual behavior
+- Environment details (OS, Rust version, etc.)
+
+### 💡 Feature Requests
+
+Have an idea? Open an issue with:
+- Use case description
+- Proposed solution
+- Alternative approaches considered
+- Implementation complexity estimate
+
+## 👨‍💻 Made by
+
+<div align="center">
+
+**Subaskar_S**
+
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Subaskar-S)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/subaskar97)
+
+*Blockchain Developer*
+
+---
+
+### 🌟 Connect with me:
+- 💼 **Professional**: [LinkedIn Profile](https://www.linkedin.com/in/subaskar97)
+- 🔧 **Code**: [GitHub Profile](https://github.com/Subaskar-S)
+- 📧 **Email**: Available on GitHub profile
+- 🌐 **Portfolio**: Check out my other blockchain projects!
+
+</div>
+
+---
+
+<div align="center">
+
+**⭐ If this project helped you, please give it a star! ⭐**
+
+*Built with ❤️ for the decentralized future*
+
+</div>
