@@ -112,9 +112,10 @@ Comprehensive test suite includes:
 ## 📚 Documentation
 
 - [Architecture Design](docs/architecture.md)
-- [Security Model](docs/security.md)
-- [Deployment Guide](docs/deployment.md)
-- [API Reference](docs/api.md)
+- [Security Model](docs/SECURITY_AUDIT.md)
+- [Deployment Guide](docs/DEPLOYMENT_GUIDE.md)
+- [API Reference](docs/API_REFERENCE.md)
+- [Test Report](docs/TESTING_REPORT.md)
 
 ## 🛡️ Security Considerations
 
