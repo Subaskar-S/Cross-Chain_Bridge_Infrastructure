@@ -226,15 +226,13 @@ Have an idea? Open an issue with:
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Subaskar-S)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/subaskar97)
 
-*Blockchain Developer*
+*Full-Stack Developer & Blockchain Enthusiast*
 
 ---
 
 ### 🌟 Connect with me:
-- 💼 **Professional**: [LinkedIn Profile](https://www.linkedin.com/in/subaskar97)
-- 🔧 **Code**: [GitHub Profile](https://github.com/Subaskar-S)
-- 📧 **Email**: Available on GitHub profile
-- 🌐 **Portfolio**: Check out my other blockchain projects!
+💼 **Professional**: [LinkedIn Profile](https://www.linkedin.com/in/subaskar97)
+🔧 **Code**: [GitHub Profile](https://github.com/Subaskar-S)
 
 </div>
 
